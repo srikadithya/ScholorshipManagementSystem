@@ -1,0 +1,49 @@
+/* Navbar container */
+.navbar {
+  background-color: #feccc9; /* Background for the navbar */
+  padding: 10px 20px; /* Navbar padding */
+  display: flex;
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
+  border-radius: 5px; /* Slight rounding of navbar corners */
+}
+
+/* Navbar logo styling */
+.navbar-logo {
+  width: 35px; /* Logo size */
+  height: auto; /* Keep aspect ratio */
+  margin-right: 15px; /* Space between logo and links */
+}
+
+/* Navbar links (buttons in box) */
+.navbar a {
+  color: #333; /* Darker text color for better contrast */
+  text-decoration: none;
+  font-size: 16px; /* Font size */
+  margin: 0 10px; /* Space between links */
+  padding: 10px 15px; /* Padding inside each link box */
+  border-radius: 5px; /* Rounded corners */
+  background: linear-gradient(to right, #dfc1d2 0%, #f0b3c4 100%); /* Linear gradient box */
+  transition: color 0.3s, transform 0.3s, background 0.3s; /* Smooth transitions */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on links */
+}
+
+/* Hover effect */A
+.navbar a:hover {
+  color: white; /* Text color on hover */
+  background: linear-gradient(to right, #f0b3c4 0%, #dfc1d2 100%); /* Slight gradient change on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Active link styling */
+.navbar a.active {
+  color: #3498db; /* Active link text color */
+  background: #f0b3c4; /* Solid color for active link background */
+  border-bottom: 2px solid #3498db; /* Bottom border for active link */
+}
+
+/* Additional hover state for active link */
+.navbar a.active:hover {
+  background: #eab8d1; /* Lighten active background on hover */
+}

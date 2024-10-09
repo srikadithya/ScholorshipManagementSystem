@@ -1,0 +1,66 @@
+/* Container for tracking the scholarship */
+.track-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 500px; /* Limit the maximum width of the box */
+  height: auto; /* Adjust height automatically based on content */
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* Vertically center with margin */
+}
+
+/* Input field styling */
+.track-input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.track-input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* Search button styling */
+.track-btn {
+  width: 50%; /* Set the button width to 50% for a balanced look */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F3B1B1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px; /* Add margin to separate from the details */
+}
+
+.track-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the scholarship details */
+.scholarship-details {
+  width: 100%; /* Keep the details width within the container */
+  padding: 20px;
+  background-color: #e7f3ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message styling */
+.error-message {
+  margin-top: 20px;
+  color: red;
+  font-size: 16px;
+}

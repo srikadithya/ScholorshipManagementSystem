@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  background-color: #dac2d8; /* Background color for the whole page */
+}
+.apply-container {
+  margin: 20px;
+  background-color: #dac2d8; /* Set the background color */
+
+}
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+form input, form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+button {
+  padding: 10px 20px;
+  background-color: #F3B1B1;
+  color: #F3B1B1;
+  border: none;
+}

@@ -1,0 +1,181 @@
+/* AuthPage.css */
+
+/* Container for the login/signup page */
+.auth-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    perspective: 1000px; /* Add perspective for the 3D flip effect */
+    background-color: #dac2d8; /* Set background color to match AuthPage */
+}
+
+/* Form container for flipping effect */
+.form-container {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d; /* Preserve 3D effect */
+    transition: transform 0.6s ease-in-out; /* Smooth flip transition */
+}
+/* Styling for form buttons inside the login/signup form */
+.form-container button {
+    padding: 10px 20px;
+    background-color: #F3B1B1; /* Light pink background for buttons */
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover state for buttons */
+.form-container button:hover {
+    background-color: #e19090; /* Darker pink on hover */
+    color: white; /* White text on hover */
+}
+
+/* Ensure button text is always visible */
+.form-container button:focus, .form-container button:active, .form-container button {
+    background-color: #F3B1B1; /* Light pink */
+    color: white; /* White text */
+}
+
+
+/* Front face (Login) */
+.form-container .login-face,
+.form-container .signup-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face when flipped */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Front face styling for Login */
+.form-container .login-face {
+    background-color: #fecdc9; /* Updated background for the login face */
+}
+
+/* Back face styling for Sign Up */
+.form-container .signup-face {
+    background-color: #fecdc9; /* Updated background for the signup face */
+    transform: rotateY(0deg); /* Rotate back face */
+}
+
+/* Flipping effect */
+.flip-to-login {
+    transform: rotateY(0deg); /* Show Login */
+}
+
+.flip-to-signup {
+    transform: rotateY(360deg); /* Show Sign Up */
+}
+
+/* Toggle buttons styling */
+.auth-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.auth-toggle button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: #fecdc9; /* Light pink background */
+    color: #333; /* Dark text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure the text color is always dark */
+.auth-toggle button:focus, .auth-toggle button:active, .auth-toggle button {
+    background-color: #fecdc9; /* Light pink */
+    color: #333; /* Dark text color */
+}
+
+/* Active button styling */
+.auth-toggle button.active {
+    background-color: #333; /* Dark background for active button */
+    color: white; /* White text for contrast */
+}
+
+/* Hover state */
+.auth-toggle button:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    color: #333; /* Dark text */
+}
+
+/* Role switch container */
+.role-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Add spacing above the form */
+}
+
+/* Role switch button styling */
+.role-switch button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: white; /* White background for Student button */
+    color: #333; /* Dark text for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active state for role switch buttons */
+.role-switch button.active {
+    background-color: white; /* Keep active button white */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Hover effect for role switch buttons */
+.role-switch button:hover {
+    background-color: #f0f0f0; /* Light gray on hover for feedback */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Admin button specific styling */
+.role-switch button:nth-child(2) {
+    background-color: white; /* White background for Admin button */
+}
+
+.role-switch button:nth-child(2).active {
+    background-color: white; /* Keep active Admin button white */
+    color: #333; /* Dark text for contrast */
+}
+
+.role-switch button:nth-child(2):hover {
+    background-color: #f0f0f0; /* Light gray on hover for feedback */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Apply button styling in Apply.js */
+.apply-container button {
+    background-color: white; /* White background for Apply button */
+    color: #333; /* Dark text for contrast */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.apply-container button:hover {
+    background-color: #f0f0f0; /* Light gray on hover for feedback */
+    color: #333; /* Dark text for contrast */
+}
