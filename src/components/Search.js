@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Search.css';  // Make sure you have styles
+import PostLoginNavbar from './PostLoginNavbar';
 
 const Search = () => {
   const scholarships = [
@@ -20,7 +21,9 @@ const Search = () => {
   };
 
   return (
-    <div className="search-container">
+    <div>
+      <PostLoginNavbar/>
+      <div className="search-container">
       <h1>Search Scholarships</h1>
       <input
         type="text"
@@ -36,6 +39,7 @@ const Search = () => {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };

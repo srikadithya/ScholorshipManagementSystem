@@ -1,0 +1,24 @@
+.post-login-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a73e8; /* Primary color */
+    padding: 10px 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #ffcc00; /* Highlight color */
+  }
+  

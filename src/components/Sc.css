@@ -1,0 +1,58 @@
+.sa-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 800zpx;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sa-container h1 {
+    color: #4caf50;
+    margin-bottom: 20px;
+  }
+  
+  .sa-details {
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  .sa-details p {
+    margin: 10px 0;
+    color: #333333;
+  }
+  
+  .sa-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .sa-details li {
+    margin-bottom: 8px;
+    color: #555555;
+  }
+  
+  /* Apply button styles */
+  .apply-button {
+    background-color: #4caf50; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .apply-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .success-message {
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

@@ -1,37 +1,46 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-
-const LoginSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string()
-    .min(6, 'Password too short')
-    .required('Required'),
-});
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = (values) => {
+    // Send login request to backend
+    axios.post("http://localhost:8080/loginstudent", {
+      email: values.email,
+      password: values.password
+    }).then((res) => {
+      if (res.data === true) {
+        // Redirect to the Search page after successful login
+        navigate("/PostLoginNavbar ");
+      } else {
+        alert("Incorrect email or password");
+      }
+    }).catch((err) => {
+      console.error(err);
+    });
+  };
+
   return (
     <div>
       <h2>Login</h2>
       <Formik
         initialValues={{ email: "", password: "" }}
-        validationSchema={LoginSchema}
-        onSubmit={(values) => {
-          console.log(values);
-          // Implement login logic here
-        }}
+        onSubmit={handleLogin}
       >
         {() => (
           <Form>
             <div>
               <label>Email: </label>
-              <Field name="email" type="email" />
+              <Field name="email" type="email" required />
               <ErrorMessage name="email" component="div" />
             </div>
 
             <div>
               <label>Password: </label>
-              <Field name="password" type="password" />
+              <Field name="password" type="password" required />
               <ErrorMessage name="password" component="div" />
             </div>
 

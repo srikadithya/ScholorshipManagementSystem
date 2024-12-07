@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f9fc;
+}
+
+.story-image {
+  width: 100%; /* Full width of the container */
+  max-height: 200px; /* Set a consistent maximum height */
+  border-radius: 8px; /* Rounded corners */
+  object-fit: cover; /* Ensures the image fills the dimensions without distortion */
+  object-position: top; /* Adjust to show the top of the image */
+}
+
+.stories-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.stories-title {
+  color: #4caf50;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the stories */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+}
+
+.story-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden; /* Prevent images from overflowing */
+  text-align: center;
+  padding: 10px;
+  height: auto; /* Adjust based on content */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth scale transition */
+}
+
+.story-card:hover {
+  transform: scale(1.05); /* Enlarge the card when hovered */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.story-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.story-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .story-title {
+    font-size: 1.2rem;
+  }
+
+  .story-description {
+    font-size: 0.9rem;
+  }
+}

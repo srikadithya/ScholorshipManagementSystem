@@ -1,0 +1,16 @@
+.whatis {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .whatis h2 {
+    font-size: 2em;
+  }
+  
+  .whatis p {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  

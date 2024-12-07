@@ -1,6 +1,6 @@
 /* Navbar container */
 .navbar {
-  background-color: #feccc9; /* Background for the navbar */
+  background-color: #ffffff; /* Background for the navbar */
   padding: 10px 20px; /* Navbar padding */
   display: flex;
   justify-content: space-between; /* Space between items */
@@ -9,11 +9,20 @@
   border-radius: 5px; /* Slight rounding of navbar corners */
 }
 
-/* Navbar logo styling */
+/* Logo Styling */
 .navbar-logo {
-  width: 35px; /* Logo size */
-  height: auto; /* Keep aspect ratio */
-  margin-right: 15px; /* Space between logo and links */
+  width: 35px; /* Adjust the size as needed */
+  height: auto;
+  margin-left: 100px; /* Increased margin-left for better alignment */
+}
+
+/* Navbar links container */
+.navbar .nav-links {
+  display: flex; /* Align links horizontally */
+  flex-grow: 1; /* Allow links to take available space */
+  justify-content: flex-end; /* Align links to the right */
+  margin-right: 100px; /* Space from the right edge */
+  gap: 250px; /* Space between links */
 }
 
 /* Navbar links (buttons in box) */
@@ -21,15 +30,14 @@
   color: #333; /* Darker text color for better contrast */
   text-decoration: none;
   font-size: 16px; /* Font size */
-  margin: 0 10px; /* Space between links */
   padding: 10px 15px; /* Padding inside each link box */
   border-radius: 5px; /* Rounded corners */
-  background: linear-gradient(to right, #dfc1d2 0%, #f0b3c4 100%); /* Linear gradient box */
+  background: linear-gradient(to right, #b4f4b4 0%, #b4f4b4 100%); /* Linear gradient box */
   transition: color 0.3s, transform 0.3s, background 0.3s; /* Smooth transitions */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on links */
 }
 
-/* Hover effect */A
+/* Hover effect */
 .navbar a:hover {
   color: white; /* Text color on hover */
   background: linear-gradient(to right, #f0b3c4 0%, #dfc1d2 100%); /* Slight gradient change on hover */
