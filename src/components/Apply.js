@@ -2,39 +2,47 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Apply.css';
 import PostLoginNavbar from './PostLoginNavbar';
+import apjImage from '../assets/apj.png';
+import ramImage from '../assets/ram.jpg';
+import savitribaiImage from '../assets/savitribai.jpg';
+import swamiImage from '../assets/swamivivekananda.jpg';
 
 const scholarships = [
-  { id: 1, name: 'Scholarship A', route: '/sa' },
-  { id: 2, name: 'Scholarship B', route: '/sb' },
-  { id: 3, name: 'Scholarship C', route: '/sc' },
-  { id: 4, name: 'Scholarship D', route: '/sd' },
-  { id: 5, name: 'Scholarship E', route: '/se' },
+  { id: 1, name: 'APJ Scholarship', route: '/sa', image: apjImage },
+  { id: 2, name: 'Ram Scholarship', route: '/sb', image: ramImage },
+  { id: 3, name: 'Savitribai Scholarship', route: '/sc', image: savitribaiImage },
+  { id: 4, name: 'Swami Vivekananda Scholarship', route: '/sd', image: swamiImage },
 ];
 
 const Apply = () => {
   const navigate = useNavigate();
 
   const handleBoxClick = (scholarship) => {
-    navigate(scholarship.route); // Navigate to the route defined for the scholarship
+    navigate(scholarship.route); // Navigate to the original route defined for the scholarship
   };
 
   return (
     <div>
-      <PostLoginNavbar/>
+      <PostLoginNavbar />
       <div className="apply-container">
-      <h1>Available Scholarships</h1>
-      <div className="scholarship-grid">
-        {scholarships.map((scholarship) => (
-          <div
-            key={scholarship.id}
-            className="scholarship-box"
-            onClick={() => handleBoxClick(scholarship)}
-          >
-            <h2>{scholarship.name}</h2>
-          </div>
-        ))}
+        <h1>Available Scholarships</h1>
+        <div className="scholarship-grid">
+          {scholarships.map((scholarship) => (
+            <div
+              key={scholarship.id}
+              className="scholarship-box"
+              onClick={() => handleBoxClick(scholarship)}
+            >
+              <img
+                src={scholarship.image}
+                alt={scholarship.name}
+                className="scholarship-image"
+              />
+              <h2 className="scholarship-name">{scholarship.name}</h2>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
