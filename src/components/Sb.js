@@ -8,16 +8,16 @@ const Sa = () => {
 
   return (
     <div className="sa-container">
-      <h1>Scholarship A</h1>
+      <h1>Ramanujan Scholarship</h1>
       <div className="sa-details">
-        <p>Welcome to the Scholarship A page!</p>
+        <p>Welcome to the Ramanujan Scholarship page!</p>
         <p>
-          Scholarship A is designed to help students achieve their academic goals. Check out the eligibility criteria, application process, and benefits below:
+        The Ramanujan Scholarship is aimed at helping students excel in mathematics. Below are the eligibility criteria, application process, and benefits:
         </p>
         <ul>
-          <li>Eligibility: Students pursuing undergraduate degrees.</li>
+          <li>Eligibility: Students pursuing undergraduate or postgraduate degrees in mathematics.</li>
           <li>Application Deadline: 31st December 2024.</li>
-          <li>Benefits: $5000 towards tuition fees.</li>
+          <li>Benefits: $3000 towards tuition fees and research support.</li>
         </ul>
       </div>
       <ApplyScholarship/>      

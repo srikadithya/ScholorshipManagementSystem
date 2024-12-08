@@ -64,3 +64,9 @@
   color: red;
   font-size: 16px;
 }
+
+.track-gif {
+  width: 300px; /* Adjust as needed */
+  height: auto;
+  margin-top: 20px;
+}

@@ -1,47 +1,50 @@
-import React, { useState } from 'react';
-import './Search.css';  // Make sure you have styles
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Apply.css';
 import PostLoginNavbar from './PostLoginNavbar';
+import apjImage from '../assets/apj.png';
+import ramImage from '../assets/ram.jpg';
+import savitribaiImage from '../assets/savitribai.jpg';
+import swamiImage from '../assets/swamivivekananda.jpg';
 
-const Search = () => {
-  const scholarships = [
-    { id: 1, name: 'Scholarship A', status: 'Available' },
-    { id: 2, name: 'Scholarship B', status: 'Closed' },
-  ];
+const scholarships = [
+  { id: 1, name: 'Abdul Kalam Scholarship', route: '', image: apjImage },
+  { id: 2, name: 'ramanujan Scolarship', route: '', image: ramImage },
+  { id: 3, name: 'Savitribai Scholarship', route: '', image: savitribaiImage },
+  { id: 4, name: 'Vivekananda Scholarship', route: '', image: swamiImage },
+];
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredResults, setFilteredResults] = useState(scholarships);
+const Apply = () => {
+  const navigate = useNavigate();
 
-  const handleSearch = (e) => {
-    const value = e.target.value.toLowerCase();
-    setSearchTerm(value);
-    setFilteredResults(
-      scholarships.filter((scholarship) => 
-        scholarship.name.toLowerCase().includes(value))
-    );
+  const handleBoxClick = (scholarship) => {
+    navigate(scholarship.route); // Navigate to the original route defined for the scholarship
   };
 
   return (
     <div>
-      <PostLoginNavbar/>
-      <div className="search-container">
-      <h1>Search Scholarships</h1>
-      <input
-        type="text"
-        value={searchTerm}
-        placeholder="Search..."
-        onChange={handleSearch}
-        className="search-input"
-      />
-      <ul className="search-results">
-        {filteredResults.map((scholarship) => (
-          <li key={scholarship.id}>
-            {scholarship.name} - {scholarship.status}
-          </li>
-        ))}
-      </ul>
-    </div>
+      <PostLoginNavbar />
+      <div className="apply-container">
+        <h1>Available Scholarships</h1>
+        <div className="scholarship-grid">
+          {scholarships.map((scholarship) => (
+            <div
+              key={scholarship.id}
+              className="scholarship-box"
+              onClick={() => handleBoxClick(scholarship)}
+            >
+              <img
+                src={scholarship.image}
+                alt={scholarship.name}
+                className="scholarship-image"
+              />
+              <h2 className="scholarship-name">{scholarship.name}</h2>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Search;
+export default Apply;

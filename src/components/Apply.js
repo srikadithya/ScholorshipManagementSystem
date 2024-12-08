@@ -8,10 +8,10 @@ import savitribaiImage from '../assets/savitribai.jpg';
 import swamiImage from '../assets/swamivivekananda.jpg';
 
 const scholarships = [
-  { id: 1, name: 'APJ Scholarship', route: '/sa', image: apjImage },
-  { id: 2, name: 'Ram Scholarship', route: '/sb', image: ramImage },
+  { id: 1, name: 'Abdul Kalam Scholarship', route: '/sa', image: apjImage },
+  { id: 2, name: 'ramanujan Scolarship', route: '/sb', image: ramImage },
   { id: 3, name: 'Savitribai Scholarship', route: '/sc', image: savitribaiImage },
-  { id: 4, name: 'Swami Vivekananda Scholarship', route: '/sd', image: swamiImage },
+  { id: 4, name: 'Vivekananda Scholarship', route: '/sd', image: swamiImage },
 ];
 
 const Apply = () => {
